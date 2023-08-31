@@ -1,0 +1,63 @@
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&family=Tilt+Prism&display=swap');
+  body  {
+    background-image: url('https://media.tenor.com/TCuck5iIIH4AAAAC/rain-anime-rain.gif');
+    
+  }
+  .drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+  }
+  
+
+  
+  .drop-container:hover .drop-title {
+    color: skyblue;
+  }
+  
+  .drop-title {
+    font-family: 'Tilt Prism', cursive;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+  #upload-button  {
+    font-family: 'Teko', cursive;
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    border-radius: 25px;
+    width: 300px;
+    height: 50px;
+    border-color: white;
+  }
+</style>
+<form method=post enctype=multipart/form-data>
+<label for="images" class="drop-container" id="dropcontainer">
+  <span class="drop-title">Drop files here</span>
+
+  <input  hidden=true type=file id="images" name=file multiple='true'>
+ 
+</label>
+
+
+   <center>
+    <br></br>
+    <input id='upload-button' type='submit' name='file' value='Upload'>
+   </center>
+  </form>
+</body>
